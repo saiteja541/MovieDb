@@ -1,0 +1,15 @@
+.movie-card {
+    cursor: pointer;
+    transition: transform 0.2s ease;
+  }
+  
+  @media (max-width: 768px) {
+    .movie-card img {
+      height: auto;
+    }
+  
+    .movie-card {
+      margin-bottom: 20px;
+    }
+  }
+  
