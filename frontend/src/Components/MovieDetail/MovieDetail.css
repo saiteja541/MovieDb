@@ -1,0 +1,245 @@
+body {
+    padding: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #fff;
+    margin: 0;
+}
+
+.movie-detail {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.movie-info {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 15px;
+    width: 100%;
+    background-color: #000000;
+    margin-bottom: 20px;
+    background-image: url('https://image.tmdb.org/t/p/w500/${movie.poster_path}');
+    background-repeat: no-repeat;
+    background-position: center right;
+    background-size: 50%;
+    background-blend-mode: screen;
+}
+
+.movie-info img {
+    height: 280px;
+    width: 220px;
+    padding: 15px;
+}
+
+.movie-details {
+    color: #fff;
+    padding: 8px;
+    margin-left: 10px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.movie-details-1 {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.movie-details-1 h1 {
+    margin: 0;
+}
+
+.movie-details-1 .rating,
+.movie-details-1 .time,
+.movie-details-1 .category,
+.movie-details-1 .date {
+    margin-top: 5px;
+}
+
+.movie-details-1 .movie-info-extra {
+    display: flex;
+    align-items: center;
+}
+
+.movie-details-1 .movie-info-extra .time {
+    margin-right: 15px;
+}
+
+.movie-details-2 {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-top: 20px;
+}
+
+.movie-details-2 h3 {
+    margin-left: -220px;
+    padding-top: 60px;
+}
+
+.movie-details-2 .overview {
+    width: 60%;
+    padding-right: 10px;
+    margin-top: 10px;
+    text-align: left;
+    margin-left: -230px;
+}
+
+.cast-section {
+    width: 100%;
+    overflow: hidden;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+.cast-list {
+    display: flex;
+    overflow-x: auto;
+    overflow-y: hidden;
+    scrollbar-width: none;
+    color: black;
+}
+
+.cast-section h2 {
+    color: #000;
+}
+
+.cast-list::-webkit-scrollbar {
+    display: none;
+}
+
+.cast-list .cast-member {
+    margin-right: 20px;
+    text-align: center;
+}
+
+.cast-list img {
+    width: 120px;
+    height: 150px;
+}
+
+.cast-list p {
+    text-align: center;
+}
+
+
+@media (max-width: 1200px) {
+    .movie-info {
+        flex-direction: row;
+        align-items: flex-start;
+    }
+
+    .movie-info img {
+        height: 250px;
+        width: 200px;
+    }
+
+    .movie-details-1 {
+        align-items: flex-start;
+        margin-left: 0;
+    }
+
+    .movie-details-2 .overview {
+        width: 70%;
+    }
+}
+
+@media (max-width: 992px) {
+    .movie-info {
+        flex-direction: column;
+        align-items: center;
+        background-position: center center;
+        background-size: 60%;
+    }
+
+    .movie-info img {
+        width: 180px;
+        height: 240px;
+    }
+
+    .movie-details-1 {
+        align-items: center;
+        text-align: center;
+        margin-left: 0;
+    }
+
+    .movie-details-1 h1 {
+        font-size: 1.5em;
+    }
+
+    .movie-details-2 .overview {
+        width: 90%;
+        margin-left: 0;
+    }
+
+    .movie-details-2 h3 {
+        margin-left: 0;
+        padding-top: 20px;
+    }
+
+    .cast-list {
+        flex-direction: row;
+        width: 100%;
+    }
+
+    .cast-list .cast-member {
+        margin-right: 10px;
+        margin-bottom: 20px;
+    }
+
+    .cast-list img {
+        width: 100px;
+        height: 125px;
+    }
+}
+
+@media (max-width: 768px) {
+    .movie-info {
+        background-size: 70%;
+    }
+
+    .movie-info img {
+        width: 150px;
+        height: 200px;
+    }
+
+    .movie-details-1 h1 {
+        font-size: 1.2em;
+    }
+
+    .movie-details-2 .overview {
+        font-size: 0.9em;
+    }
+
+    .cast-list img {
+        width: 80px;
+        height: 100px;
+    }
+}
+
+@media (max-width: 480px) {
+    .movie-info {
+        background-size: 80%;
+    }
+
+    .movie-info img {
+        width: 120px;
+        height: 160px;
+    }
+
+    .movie-details-1 h1 {
+        font-size: 1em;
+    }
+
+    .movie-details-2 .overview {
+        font-size: 0.8em;
+    }
+
+    .cast-list img {
+        width: 70px;
+        height: 90px;
+    }
+}
